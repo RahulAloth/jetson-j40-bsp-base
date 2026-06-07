@@ -27,12 +27,11 @@ This repository makes the entire setup **deterministic, repeatable, and scalable
 
 ## 📦 Chapter 2 — Additional Installations Required After JetPack
 
-## 🛠️ Chapter 3 — Shell Script: Base BSP Installation
+Additional installation after the Jetpack installation and shell script for installation and verification is prepeared in the page:
+[build_essentials](build_essentials.md)
 
-## 🐍 Chapter 4 — Script for Python Virtual Environment + Pip Packages
 
-## 🧱 Chapter 5 — Build Essentials for C++ Development
+## 🐍 Chapter 4 — Script for Python Virtual Environment + Pip Packages and Build Essentials for C++ Development
 
-## 🔍 Chapter 6 — Verification Checklist (How to Confirm Everything Works)
 
 ---
