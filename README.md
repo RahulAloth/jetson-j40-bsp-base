@@ -47,7 +47,7 @@ This chapter explains:
 
 ---
 
-## 📁 Repository Structure (Recommended Section)
+## 📁 Repository Structure
 
 ```code
 jetson-j40-bsp-base/
