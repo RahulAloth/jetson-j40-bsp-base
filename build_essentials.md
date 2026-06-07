@@ -32,3 +32,5 @@ To enable full GPU acceleration and AI workloads, the following components must 
 - C++ dev libraries  
 
 All of these are automated in the scripts below.
+
+[install_base_software_packages](install_base_software_packages.sh)
