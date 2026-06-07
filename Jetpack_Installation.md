@@ -49,8 +49,10 @@ These environments cause USB flashing failures or SDK Manager crashes.
 
 Install these packages before running SDK Manager:
 
+```code
 sudo apt update  
 sudo apt install -y build-essential python3 python3-pip python3-venv curl wget git unzip libxml2-utils libusb-1.0-0-dev
+```
 
 ---
 
@@ -62,12 +64,15 @@ https://developer.nvidia.com/sdk-manager
 
 Step 2 — Install the .deb package
 
+```code
 sudo dpkg -i sdkmanager_*.deb  
 sudo apt --fix-broken install -y
-
+```
 Step 3 — Launch SDK Manager
 
+```code
 sdkmanager
+```
 
 Log in with your NVIDIA Developer account.
 
@@ -84,7 +89,9 @@ Log in with your NVIDIA Developer account.
 
 ## ✅ 6. Disable USB Autosuspend (Prevents Random Disconnects)
 
+```code
 echo -1 | sudo tee /sys/module/usbcore/parameters/autosuspend
+```
 
 ---
 
@@ -134,8 +141,10 @@ This guide explains how to flash **JetPack 6.2** onto the Jetson Orin NX J40 and
 - Install on Ubuntu 20.04 or 22.04  
 - Install the `.deb` package:
 
+```code
 sudo dpkg -i sdkmanager_*.deb  
 sudo apt --fix-broken install -y
+```
 
 ---
 
@@ -154,11 +163,15 @@ Steps:
 
 Verify detection:
 
+```code
 lsusb | grep -i nvidia
+```
 
 Expected output:
 
+```code
 0955:7323 NVIDIA Corp.
+```
 
 ---
 
@@ -185,7 +198,9 @@ Steps:
 - Connect to Wi‑Fi or Ethernet  
 - Update system:
 
+```code
 sudo apt update && sudo apt upgrade -y
+```
 
 - Reboot  
 
@@ -218,7 +233,9 @@ Repeat the recovery steps:
 
 Check detection:
 
+```code
 lsusb | grep -i nvidia
+```
 
 ---
 
@@ -226,11 +243,15 @@ lsusb | grep -i nvidia
 
 If SDK Manager was open, close and reopen:
 
+```code
 sdkmanager
+```
 
 Target Hardware should now show:
 
+```code
 Jetson Orin NX modules
+```
 
 ---
 
