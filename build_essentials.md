@@ -34,3 +34,11 @@ To enable full GPU acceleration and AI workloads, the following components must 
 All of these are automated in the scripts below.
 
 [install_base_software_packages](install_base_software_packages.sh)
+
+## How to run the script:
+
+- Download to the script to the Target system and make script executable.
+
+```shell
+chmod +x install_base_software_packages.sh
+```
