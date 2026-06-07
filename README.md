@@ -17,21 +17,76 @@ However, during real development, you quickly discover that **JetPack alone is n
 
 Setting all this up manually requires **trial‑and‑error**, dozens of package installs, and deep knowledge of Jetson internals.
 
-This repository makes the entire setup **deterministic, repeatable, and scalable** so that any developer or device can be provisioned with the **exact same working environment**.
+This repository makes the entire setup **deterministic, repeatable, and scalable**, so any developer or device can be provisioned with the **exact same working environment**.
 
 ---
 
 ## 📘 Chapter 1 — Installing JetPack 6.2 Using NVIDIA SDK Manager
+The complete JetPack flashing guide is available here:
 
-[JetPack Installation Guide](Jetpack_Installation.md)
-
-## 📦 Chapter 2 — Additional Installations Required After JetPack
-
-Additional installation after the Jetpack installation and shell script for installation and verification is prepeared in the page:
-[build_essentials](build_essentials.md)
-
-
-## 🐍 Chapter 4 — Script for Python Virtual Environment + Pip Packages and Build Essentials for C++ Development
-
+👉 [JetPack Installation Guide](Jetpack_Installation.md)
 
 ---
+
+## 📦 Chapter 2 — Additional Installations Required After JetPack
+After JetPack installation, additional system packages, CUDA components, and verification scripts are required.
+
+👉 [Build Essentials & Post‑JetPack Setup](build_essentials.md)
+
+---
+
+## 🐍 Chapter 3 — Python Environment + C++ Development Setup
+This chapter explains:
+
+- Python virtual environment creation  
+- Pip package installation  
+- C++ development toolchain setup  
+- Environment variables  
+
+👉 [Creating Developer Environment](creating_developer_env.md)
+
+---
+
+## 📁 Repository Structure (Recommended Section)
+
+```code
+jetson-j40-bsp-base/
+│
+├── install_base_software_packages.sh     # Installs CUDA, cuDNN, TensorRT, DeepStream, VPI, OpenCV
+├── setup_python_env.sh                   # Creates Python venv + installs pip packages
+├── verify_bsp_installation.sh            # Unified verification script
+│
+├── Jetpack_Installation.md               # JetPack flashing guide
+├── build_essentials.md                   # Post‑JetPack installations
+├── creating_developer_env.md             # Python + C++ environment setup
+│
+└── README.md
+```
+
+---
+
+## ⚡ Quickstart (Recommended Section)
+
+1. Flash JetPack 6.2 → `Jetpack_Installation.md`  
+2. Run BSP installer:  
+   `./install_base_software_packages.sh`  
+3. Set up Python + C++ environment:  
+   `./setup_python_env.sh`  
+4. Verify installation:  
+   `./verify_bsp_installation.sh`  
+
+---
+
+## 🎯 Who Is This For?
+
+- Edge AI developers  
+- Robotics engineers  
+- ADAS/Autonomous driving developers  
+- Anyone deploying GPU workloads on Jetson Orin NX  
+- Teams needing reproducible Jetson environments  
+
+---
+
+## 🎉 Status
+This repository provides a **production‑ready, reproducible BSP baseline** for Jetson J40 devices.
+
