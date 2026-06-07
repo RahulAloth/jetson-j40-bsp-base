@@ -1,12 +1,7 @@
+## 🐍 Script for Python Virtual Environment + Pip Packages
 
----
 
-# 🐍 **Chapter 4 — Script for Python Virtual Environment + Pip Packages**
-
-```markdown
-## 🐍 Chapter 4 — Script for Python Virtual Environment + Pip Packages
-
-Save as: `setup_python_env.sh`
+Save the below script as `setup_python_env.sh` and make it executable and run it. 
 
 ```bash
 #!/bin/bash
@@ -29,13 +24,11 @@ echo 'export VIRTUAL_ENV=/home/nyra/crf_integration/crf_env' >> ~/.bashrc
 
 echo "=== Python environment setup complete ==="
 
+```
 
 ---
 
-# 🧱 **Chapter 5 — Build Essentials for C++ Development**
-
-```markdown
-## 🧱 Chapter 5 — Build Essentials for C++ Development
+# 🧱 Build Essentials for C++ Development**
 
 Install these packages:
 
@@ -53,17 +46,12 @@ sudo apt install -y \
     libprotobuf-dev protobuf-compiler \
     libopencv-dev \
     libopenmpi-dev openmpi-bin
+```
 
-
-These enable:
-
-    TensorRT C++ engines
-
-    ONNX Runtime C++
-
-    DeepStream C++ apps
-
-    Custom CUDA kernels
-
-    High‑performance C++ inference pipelines
+### These enable:
+- TensorRT C++ engines
+- ONNX Runtime C++
+- DeepStream C++ apps
+- Custom CUDA kernels
+- High‑performance C++ inference pipelines
 
