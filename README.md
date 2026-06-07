@@ -23,6 +23,8 @@ This repository makes the entire setup **deterministic, repeatable, and scalable
 
 ## 📘 Chapter 1 — Installing JetPack 6.2 Using NVIDIA SDK Manager
 
+[JetPack Installation Guide](Jetpack_Installation.md)
+
 ## 📦 Chapter 2 — Additional Installations Required After JetPack
 
 ## 🛠️ Chapter 3 — Shell Script: Base BSP Installation
