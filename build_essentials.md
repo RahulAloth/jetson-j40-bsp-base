@@ -35,10 +35,24 @@ All of these are automated in the scripts below.
 
 [install_base_software_packages](install_base_software_packages.sh)
 
-## How to run the script:
+### How to run the script:
 
 - Download to the script to the Target system and make script executable.
 
 ```shell
 chmod +x install_base_software_packages.sh
+./install_base_software_packages.sh
+```
+## Verify installations
+- Installed packages can be verified using the below script
+
+[verify_bsp_installation](verify_bsp_installation.sh)
+
+### How to run the script:
+
+- Download to the script to the Target system and make script executable.
+
+```shell
+chmod +x verify_bsp_installation.sh
+./verify_bsp_installation.sh
 ```
