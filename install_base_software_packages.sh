@@ -1,9 +1,6 @@
 ## 🛠️ Chapter 3 — Shell Script: Base BSP Installation
-
-Save as: `install_base_software.sh`
-
-```bash
 #!/bin/bash
+
 set -e
 
 echo "=== Updating system ==="
