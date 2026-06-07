@@ -69,7 +69,7 @@ Step 1 — Download SDK Manager
 Download from NVIDIA Developer:
 
 ```bash
-https://developer.nvidia.com/sdk-manager (developer.nvidia.com in Bing)
+https://developer.nvidia.com/sdk-manager
 ```
 
 Requires an NVIDIA Developer account.
@@ -138,12 +138,10 @@ Using the recommended host PC setup ensures:
 - No corrupted rootfs images  
 - Smooth, repeatable flashing for many Jetson J40 boards  
 
-This stability is essential when scaling to **10, 50, or 100+ devices**.
-
+# 🚀 Jetson J40 Installation Guide (Using NVIDIA SDK Manager)
 
 <img width="1406" height="906" alt="image" src="https://github.com/user-attachments/assets/f43866d2-6339-46df-929a-06a9e236d412" />
 
-# 🚀 Jetson J40 Installation Guide (Using NVIDIA SDK Manager)
 
 This guide explains how to flash **JetPack 6.2** onto the Jetson Orin NX J40 and how to ensure the **Target Hardware** becomes enabled/detected inside NVIDIA SDK Manager.
 
@@ -160,6 +158,7 @@ SDK Manager is the official tool used to flash JetPack onto Jetson devices.
 ```bash
 sudo dpkg -i sdkmanager_*.deb
 sudo apt --fix-broken install -y
+```
 
 ## 📘 02 — Put Jetson J40 into Recovery Mode
 
@@ -175,12 +174,14 @@ Steps:
 - Release the Force Recovery button  
 
 Verify detection:
-
+```bash
 lsusb | grep -i nvidia
-
+```
 Expected output example:
 
+```bash
 0955:7323 NVIDIA Corp.
+```
 
 ---
 
@@ -210,8 +211,10 @@ Steps:
 - Create your username and password  
 - Connect to Wi‑Fi or Ethernet  
 - Update the system:
-
+  
+```bash
 sudo apt update && sudo apt upgrade -y
+```
 
 - Reboot the device  
 
@@ -244,7 +247,9 @@ Repeat the recovery steps:
 
 Check detection:
 
+```bash
 lsusb | grep -i nvidia
+```
 
 ---
 
@@ -252,8 +257,9 @@ lsusb | grep -i nvidia
 
 If SDK Manager was already open, close it and reopen:
 
+```bash
 sdkmanager
-
+```
 Now the Target Hardware field should automatically enable and show:
 
 Jetson Orin NX modules
@@ -277,7 +283,9 @@ Once detected:
 - Ensure host PC is Ubuntu 20.04 or 22.04  
 - Disable USB autosuspend:
 
+```bash
 echo -1 | sudo tee /sys/module/usbcore/parameters/autosuspend
+```
 
 ---
 
@@ -290,5 +298,5 @@ Once the Jetson J40 is properly connected and in Recovery Mode:
 - Flashing JetPack 6.2 proceeds without errors  
 - The device becomes ready for your BSP installation scripts  
 
-This ensures a clean, conflict‑free flashing process before installing your reproducible BSP environment.
+This ensures a clean flashing process before installing your reproducible BSP environment.
 
