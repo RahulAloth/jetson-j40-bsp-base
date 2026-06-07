@@ -15,6 +15,8 @@ The following script creates a reproducible Python virtual environment and insta
 
 ## ▶️ Python Environment Setup Script
 
+Download pip_requirements.txt from this repo and put it in the same path as of `setup_python_env.sh`
+
 Save the script below as `setup_python_env.sh`, make it executable, and run it.
 
 
