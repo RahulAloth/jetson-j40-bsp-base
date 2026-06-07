@@ -1,21 +1,27 @@
 ## 📦 Chapter 2 — Additional Installations Required After JetPack
 
-JetPack 6.2 installs only the minimal BSP.  
-To enable full GPU acceleration and AI workloads, the following components must be installed:
+JetPack 6.2 installs only the **minimal NVIDIA BSP** (kernel, drivers, bootloader, CUDA runtime).  
+To enable full GPU acceleration, AI workloads, and C++/Python development, the following components must be installed.
 
-### GPU Compute Stack
+---
+
+### ⚙️ GPU Compute Stack
 - CUDA Toolkit 12.x  
 - cuDNN 9.x  
 - TensorRT 10.x  
 - ONNX Runtime GPU  
 - PyCUDA / CUDA Python  
 
-### Vision & Multimedia
+---
+
+### 👁️ Vision & Multimedia
 - DeepStream 7.x  
 - VPI 3.x  
 - OpenCV 4.8  
 
-### Python AI/LLM/RAG Stack
+---
+
+### 🧠 Python AI / LLM / RAG Stack
 - Transformers  
 - Sentence Transformers  
 - FAISS  
@@ -23,36 +29,69 @@ To enable full GPU acceleration and AI workloads, the following components must 
 - PyTorch  
 - RAG libraries  
 
-### System Tools
+---
+
+### 🛠️ System Tools & Development Libraries
 - Docker + NVIDIA container runtime  
 - Build essentials  
 - OpenMPI  
 - OpenBLAS  
 - Codecs  
-- C++ dev libraries  
+- C++ development libraries  
 
-All of these are automated in the scripts below.
+---
 
-[install_base_software_packages](install_base_software_packages.sh)
+All of these components are installed automatically using the script below:
 
-### How to run the script:
+👉 **[install_base_software_packages.sh](install_base_software_packages.sh)**
 
-- Download to the script to the Target system and make script executable.
+---
 
-```shell
-chmod +x install_base_software_packages.sh
-./install_base_software_packages.sh
-```
-## Verify installations
-- Installed packages can be verified using the below script
+## ▶️ How to Run the Installation Script
 
-[verify_bsp_installation](verify_bsp_installation.sh)
+1. Copy the script to the Jetson J40  
+2. Make it executable  
+3. Run it
 
-### How to run the script:
 
-- Download to the script to the Target system and make script executable.
+This script installs the **entire GPU, AI, vision, and system stack** required for development.
 
-```shell
+---
+
+## 🔍 Verify Installations
+
+You can verify all installed components using:
+
+👉 **[verify_bsp_installation.sh](verify_bsp_installation.sh)**
+
+### How to run:
+
+```code
 chmod +x verify_bsp_installation.sh
 ./verify_bsp_installation.sh
 ```
+
+
+This script checks:
+
+- CUDA  
+- cuDNN  
+- TensorRT  
+- DeepStream  
+- VPI  
+- OpenCV  
+- ONNX Runtime GPU  
+- Python environment  
+- Docker GPU runtime  
+
+---
+
+## 🎉 Summary
+
+After running both scripts:
+
+- Your Jetson J40 has a **complete GPU + AI + Vision + System stack**  
+- All components are **version‑controlled and reproducible**  
+- The environment is ready for **Python LLM/RAG**, **C++ inference**, and **DeepStream pipelines**  
+
+This ensures every developer and every device has the **exact same working baseline**.
